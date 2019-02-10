@@ -89,6 +89,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vK5-DM-dpy">
+                                <rect key="frame" x="228" y="93" width="76" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Ao-V2-wdI"/>
+                                </constraints>
+                                <state key="normal" title="Navigate"/>
+                                <connections>
+                                    <action selector="navigateToResultView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g18-sd-mvg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90274518656251523" green="1" blue="0.8792223306457565" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -98,6 +108,7 @@
                             <constraint firstItem="RMv-xZ-0M5" firstAttribute="top" secondItem="B8i-lH-9il" secondAttribute="bottom" constant="16" id="6pO-ES-t3b"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RMv-xZ-0M5" secondAttribute="trailing" constant="32" id="AeV-6h-SBu"/>
                             <constraint firstItem="4ni-td-jaW" firstAttribute="top" secondItem="gJs-Ua-YKX" secondAttribute="bottom" constant="16" id="BqY-Jn-haW"/>
+                            <constraint firstItem="vK5-DM-dpy" firstAttribute="leading" secondItem="qn5-F6-F3Q" secondAttribute="trailing" constant="32" id="DaO-ru-dOe"/>
                             <constraint firstItem="3KP-EP-Chz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="N5I-do-ecz"/>
                             <constraint firstItem="4ni-td-jaW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="UIz-dm-bB4"/>
                             <constraint firstItem="RMv-xZ-0M5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="WDN-Yk-PgA"/>
@@ -111,9 +122,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gJs-Ua-YKX" secondAttribute="trailing" constant="32" id="iSP-ST-5Wi"/>
                             <constraint firstItem="gJs-Ua-YKX" firstAttribute="top" secondItem="RMv-xZ-0M5" secondAttribute="bottom" constant="16" id="lnN-b2-bpL"/>
                             <constraint firstItem="qn5-F6-F3Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mKy-nF-Jyp"/>
+                            <constraint firstItem="vK5-DM-dpy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="oGe-u4-a6Q"/>
                             <constraint firstItem="gJs-Ua-YKX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="rtj-tY-yjz"/>
                             <constraint firstItem="3KP-EP-Chz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tFq-WH-fke"/>
                             <constraint firstItem="B8i-lH-9il" firstAttribute="top" secondItem="qn5-F6-F3Q" secondAttribute="bottom" constant="16" id="vnQ-rU-ER3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vK5-DM-dpy" secondAttribute="trailing" constant="16" id="xWJ-QA-yUQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3KP-EP-Chz" secondAttribute="trailing" constant="16" id="zxt-PZ-bbh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -122,6 +135,10 @@
                         <outlet property="firstTerm" destination="B8i-lH-9il" id="aSD-F9-zkQ"/>
                         <outlet property="result" destination="3KP-EP-Chz" id="BKA-Zp-gzv"/>
                         <outlet property="secondTerm" destination="RMv-xZ-0M5" id="dge-vJ-Gbc"/>
+                        <outletCollection property="operationButtons" destination="iBb-Ph-rt1" collectionClass="NSMutableArray" id="N48-uJ-W0Q"/>
+                        <outletCollection property="operationButtons" destination="Tl7-86-qTg" collectionClass="NSMutableArray" id="cKX-aM-WjB"/>
+                        <outletCollection property="operationButtons" destination="GME-fq-hHR" collectionClass="NSMutableArray" id="bSX-qa-awo"/>
+                        <outletCollection property="operationButtons" destination="oTx-9K-Avu" collectionClass="NSMutableArray" id="UaL-dq-cyr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,7 +148,7 @@
         <!--Result View Controller-->
         <scene sceneID="CcO-x0-itH">
             <objects>
-                <viewController id="MqN-WW-yV8" customClass="ResultViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="MqN-WW-yV8" customClass="ResultViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szD-JD-6Fa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,6 +10,8 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
+    var presenter: ResultPresenterProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +29,8 @@ class ResultViewController: UIViewController {
     }
     */
 
+}
+
+extension ResultViewController: ResultViewProtocol {
+    
 }

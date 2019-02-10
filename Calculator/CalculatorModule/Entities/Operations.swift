@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+enum Operators: Character {
+    
+    case plus = "+"
+    case minus = "-"
+    case multiply = "*"
+    case divide = "/"
+    
+}

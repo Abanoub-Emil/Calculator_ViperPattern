@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class ResultPresenter: ResultPresenterProtocol {
+    
+    
+    weak var view: ResultViewProtocol?
+    
+    var interactor: ResultInteractorProtocol?
+    
+    var router: ResultRouterProtocol?
+    
+    
+    
+}

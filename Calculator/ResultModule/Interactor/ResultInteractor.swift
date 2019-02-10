@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class ResultInteractor: ResultInteractorProtocol {
+    
+    weak var presenter: ResultPresenterProtocol?
+
+}
